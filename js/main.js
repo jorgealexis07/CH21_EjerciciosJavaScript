@@ -87,7 +87,6 @@ function getRandom(min, max) {
   
  //Ejercicio #4
  //Solicitar un entero (entre el 100 y el 200) y determinar si es múltiplo de 3
-
  function multiplo3(numero){
     if (numero >= 100 && numero <= 200) {
         if((numero % 3)==0){
@@ -99,6 +98,13 @@ function getRandom(min, max) {
     } else {
         return "El numero ingresado debe ser entre el 100 y el 200"
     }
-    
  }
+
+ let btnCalcularMultiplo = document.getElementById("btnCalcularMultiplo");
+ btnCalcularMultiplo.addEventListener("click", function(event){
+    event.preventDefault();
+    let numEnt = parseInt(document.getElementById("inputNumEnt").value) ;
+    let resultado = document.getElementById("displayej1");
+    resultado.innerHTML = multiplo3(numEnt);
+ });
 
