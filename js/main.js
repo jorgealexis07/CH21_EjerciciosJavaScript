@@ -72,6 +72,17 @@ btnCalcularEJ2.addEventListener("click", function (event) {
     }else{
         console.log("Debes ingresar numeros entre el 1 y el 100");
     }
-    
 } );
+
+function getRandom(min, max) {
+    return Math.random() * (max - min) + min;
+}
+
+  let btnCalcularEJ3 = document.getElementById("btnCalcularEJ3");
+  btnCalcularEJ3.addEventListener("click", function(event){
+    event.preventDefault();
+    let resultado = document.getElementById("displayej1");
+    resultado.innerHTML=parseInt(getRandom(0,100)) ;
+ })
+  
 
