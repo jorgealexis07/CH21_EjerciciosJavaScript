@@ -28,10 +28,9 @@ function NumerosRepetidos(Numeros) {
     if (Numeros[i]==Numeros[i+1]) {
       return `El número ${Numeros[i]} se encuentra más de una vez `;
     } else {
-      console.log("No hay números repetidos")
+      return("No hay números repetidos")
     }
   }
-  return arreglo;
 }
 Numeros = [7, 41, 5, 7, 10, 13, 2].sort();
 console.log(Numeros);
@@ -70,10 +69,11 @@ btnCalcularEJ2.addEventListener("click", function (event) {
         let Numeros = [num1,num2,num3];
         Result.innerHTML = NumeroMenor(Numeros);
     }else{
-        console.log("Debes ingresar numeros entre el 1 y el 100");
+        Result.innerHTML = "Debes ingresar numeros entre el 1 y el 100";
     }
 } );
 
+//Ejercicio #3 Adivinar un numero aleatorio.
 function getRandom(min, max) {
     return Math.random() * (max - min) + min;
 }
@@ -85,4 +85,20 @@ function getRandom(min, max) {
     resultado.innerHTML=parseInt(getRandom(0,100)) ;
  })
   
+ //Ejercicio #4
+ //Solicitar un entero (entre el 100 y el 200) y determinar si es múltiplo de 3
+
+ function multiplo3(numero){
+    if (numero >= 100 && numero <= 200) {
+        if((numero % 3)==0){
+            return `El numero ${numero} es multiplo de 3`
+        }
+        else{
+            return "El numero que ingresaste no es multiplo de 3"
+        }
+    } else {
+        return "El numero ingresado debe ser entre el 100 y el 200"
+    }
+    
+ }
 
