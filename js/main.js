@@ -14,13 +14,10 @@ console.log(NumeroMayor(Numeros));
 
 //Ejercicio #2
 function NumeroMenor(Numeros) {
-  let menor = 0;
-  for (let i = 0; i < Numeros.length; i++) {
-    if (Numeros[i] < menor) {
-      menor = Numeros[i];
-    }
-  }
-  return menor;
+  let OrdenarNumeros =Numeros.sort();
+  let menor = OrdenarNumeros;
+
+  return menor[0];
 }
 Numeros = [-1, 3, 4, 2, 6];
 console.log(NumeroMenor(Numeros));
@@ -68,7 +65,13 @@ btnCalcularEJ2.addEventListener("click", function (event) {
     let num2 = parseInt(document.getElementById("inputNum2").value);
     let num3 = parseInt(document.getElementById("inputNum3").value);
     let Result = document.getElementById("displayej1");
+    if ((num1 >= 0 && num1 <=100) && (num2 >= 0 && num2 <=100)&&  (num3 >= 0 && num3 <=100))
+    {
+        let Numeros = [num1,num2,num3];
+        Result.innerHTML = NumeroMenor(Numeros);
+    }else{
+        console.log("Debes ingresar numeros entre el 1 y el 100");
+    }
     
-    let Numeros = [num1,num2,num3];
-    Result.innerHTML = NumeroMenor(Numeros);
 } );
+
