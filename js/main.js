@@ -38,3 +38,10 @@ function NumerosRepetidos(Numeros) {
 Numeros = [7, 41, 5, 7, 10, 13, 2].sort();
 console.log(Numeros);
 console.log(NumerosRepetidos(Numeros));
+
+//Ejercicio #4
+const ArrayDesordenado = ar => ar.sort(() => Math.random()-0.5);
+
+Numeros = [1, 2, 5, 14, 24, 31, 50, 105];
+console.log("Numeros Ordenados: "+Numeros);
+console.log("Numeros Desordenados: "+ArrayDesordenado(Numeros));
