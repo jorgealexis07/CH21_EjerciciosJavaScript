@@ -108,3 +108,27 @@ function getRandom(min, max) {
     resultado.innerHTML = multiplo3(numEnt);
  });
 
+ //5. Elaborar un algoritmo para leer 3 números y determinar sí uno es la suma de los otros dos
+function suma2num(a,b,c) {
+  if (a+b==c) {
+    return `${c} es la suma de ${a} + ${b}`;
+  } else if((a+c)==b) {
+    return `${b} es la suma de ${a} + ${c}`;
+  } else if ((b+c)==a) {
+    return `${a} es la suma de ${b} + ${c}`;
+  } else {
+    return `Ningún numero es la suma de algun producto.`;
+  }
+}
+
+let btnCalcularSuma2num = document.getElementById("btnCalcularSuma2num");
+btnCalcularSuma2num.addEventListener("click", function (event) {
+  event.preventDefault();
+  let numA =parseInt(document.getElementById("inputNum1").value);
+  let numB = parseInt(document.getElementById("inputNum2").value);
+  let numC = parseInt(document.getElementById("inputNum3").value);
+  let Resultado = document.getElementById("displayej1");
+
+  Resultado.innerHTML= suma2num(numA,numB,numC);
+});
+
