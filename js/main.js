@@ -132,3 +132,20 @@ btnCalcularSuma2num.addEventListener("click", function (event) {
   Resultado.innerHTML= suma2num(numA,numB,numC);
 });
 
+//6. Elabora un algoritmo para leer un número y determinar si es par o impar
+function parOimpar(numero) {
+  if ((numero % 2) == 0) {
+    return "El número que ingresaste es par";    
+  }
+  else{
+    return "El número que ingresaste es impar";   
+  }
+}
+
+let btnCalcularParOimpar = document.getElementById("btnCalcularParOimpar");
+btnCalcularParOimpar.addEventListener("click", function(event) {
+  event.preventDefault();
+  let Numero = parseInt(document.getElementById("inputNumEnt").value) ;
+  let Resultado = document.getElementById("displayej1");
+  Resultado.innerHTML = parOimpar(Numero);
+});
